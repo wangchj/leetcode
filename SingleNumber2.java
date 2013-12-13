@@ -23,13 +23,13 @@ public class SingleNumber2
                 end++;
             else
             {
-                if(end - start == 1)
+                if(end - start < 3)
                     return A[start];
                 else
                     start = end;
             }
         }
-        if(end - start == 1)
+        if(end - start < 3)
             return A[start];
         return 0;
     }
