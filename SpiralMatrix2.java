@@ -30,20 +30,20 @@ public class SpiralMatrix2
 
         for(int i = 0; i < stop; i++)
         {
-           m[row][col] = i + 1;
-           if(atEdge(m, head, row, col))
-              head = (head + 1) % 4;
-           switch(head)
-           {
-              case head_r:
-                 col++; break;
-              case head_d:
-                 row++; break;
-              case head_l:
-                 col--; break;
-              case head_u:
-                 row--; break;
-           }
+            m[row][col] = i + 1;
+            if(atEdge(m, head, row, col))
+                head = (head + 1) % 4;
+            switch(head)
+            {
+                case head_r:
+                    col++; break;
+                case head_d:
+                    row++; break;
+                case head_l:
+                    col--; break;
+                case head_u:
+                    row--; break;
+            }
         }
         return m;
     }
@@ -57,20 +57,20 @@ public class SpiralMatrix2
 
         switch(head)
         {
-           case head_r:
-              return (col == n -1) || (m[row][col + 1] != 0);
-           case head_d:
-              return (row == n -1) || (m[row + 1][col] != 0);
-           case head_l:
-              return (col == 0) || (m[row][col - 1] != 0);
-           case head_u:
-              return (row == 0) || (m[row - 1][col] != 0);
+            case head_r:
+                return (col == n -1) || (m[row][col + 1] != 0);
+            case head_d:
+                return (row == n -1) || (m[row + 1][col] != 0);
+            case head_l:
+                return (col == 0) || (m[row][col - 1] != 0);
+            case head_u:
+                return (row == 0) || (m[row - 1][col] != 0);
         }
-        return true;
+        return true; //This should never be reached
     }
    
     public static void main(String[] args)
     {
-       int[][] m = generateMatrix(3);
+        int[][] m = generateMatrix(3);
     }
 }
