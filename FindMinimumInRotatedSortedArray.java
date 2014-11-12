@@ -1,6 +1,6 @@
 /**
  * Author: Chih-Jye Wang
- * Date  : Feb 13, 2014
+ * Date  : Nov 12, 2014
  *
  * Suppose a sorted array is rotated at some pivot unknown to you beforehand.
  * 
