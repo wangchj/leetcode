@@ -28,8 +28,8 @@ public class FindMinimumInRotatedSortedArray
      */
     public int findMin(int[] num, int start, int end)
     {
-        if(num.length == 1 || num[start] < num[end])
-            return num[0];
+        if(end - start == 0 || num[start] < num[end])
+            return num[start];
         
         int mid = (start + end) / 2;
         
@@ -39,7 +39,7 @@ public class FindMinimumInRotatedSortedArray
             return num[mid + 1];
         
         //See which part to do next binary search
-        if(num[start] > num[mid - 1])
+        if(mid > 0 && num[start] > num[mid - 1])
             return findMin(num, start, mid - 1);
         else
             return findMin(num, mid + 1, end);
